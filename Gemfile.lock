@@ -1,0 +1,98 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.6)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
+    capybara (2.4.3)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.5.5)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.0)
+    columnize (0.8.9)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
+    debugger-linecache (1.2.0)
+    diff-lcs (1.2.5)
+    discourse_api (0.3.0)
+      dotenv (~> 1.0)
+      faraday (= 0.9.0)
+      faraday_middleware (~> 0.9)
+      rack (~> 1.5)
+    dotenv (1.0.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
+    ffi (1.9.6)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    method_source (0.8.2)
+    mime-types (1.25.1)
+    mini_portile (0.6.1)
+    multi_json (1.10.1)
+    multipart-post (2.0.0)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
+    polyglot (0.3.5)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (2.0.0)
+      byebug (~> 3.4)
+      pry (~> 0.10)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.4)
+    rubyzip (1.1.6)
+    safe_yaml (1.0.4)
+    selenium-webdriver (2.43.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    slop (3.6.0)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    vcr (2.9.3)
+    webmock (1.19.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+    websocket (1.2.1)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  capybara
+  discourse_api
+  mail
+  pry
+  pry-byebug
+  rspec
+  selenium-webdriver
+  vcr
+  webmock

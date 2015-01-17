@@ -1,0 +1,11 @@
+{ 
+  "url": "http://forum.example.com",
+  "api_username":"API_USERNAME",
+  "api_key":"API_KEY",
+  "api_password":"API_PASSWORD",
+  "database": {
+    "type": "sqlite3",
+    "username": "DB_USERNAME",
+    "password": "DB_PASSWORD"
+  }
+}
