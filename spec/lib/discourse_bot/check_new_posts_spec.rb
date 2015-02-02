@@ -17,4 +17,27 @@ describe DiscourseBot::CheckNewPosts do
       expect(activity.results).to eql('results')
     end
   end
+
+  describe '#process' do
+    let(:response_json) do
+      [{ 'id' => 1, 'title' => :a },
+       { 'id' => 2, 'title' => :b }]
+    end
+
+    it 'turns the results array of hashes into message objects' do
+      message1 = instance_double(DiscourseBot::Message)
+      message2 = instance_double(DiscourseBot::Message)
+      expect(DiscourseBot::Message).to receive(:new)
+        .with(id: 1, text: :a)
+        .and_return(message1)
+      expect(DiscourseBot::Message).to receive(:new)
+        .with(id: 2, text: :b)
+        .and_return(message2)
+
+      activity.results = response_json
+      activity.process
+
+      expect(activity.messages).to eq([message1, message2])
+    end
+  end
 end

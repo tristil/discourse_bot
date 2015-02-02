@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     byebug (3.5.1)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
@@ -18,6 +20,7 @@ GEM
     columnize (0.8.9)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     discourse_api (0.3.0)
@@ -31,6 +34,7 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.6)
+    interception (0.5)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -49,6 +53,12 @@ GEM
     pry-byebug (2.0.0)
       byebug (~> 3.4)
       pry (~> 0.10)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
+    pry-stack_explorer (0.4.9.1)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -92,6 +102,8 @@ DEPENDENCIES
   mail
   pry
   pry-byebug
+  pry-rescue
+  pry-stack_explorer
   rspec
   selenium-webdriver
   vcr

@@ -2,7 +2,7 @@ module DiscourseBot
   class Config
     attr_accessor :filename
 
-    attr_reader :data
+    attr_accessor :data
 
     def initialize(filename)
       self.data = {}
@@ -26,7 +26,7 @@ module DiscourseBot
     end
 
     def load
-      @data = JSON.load(File.read(filename).strip)
+      self.data = JSON.load(File.read(filename).strip)
       raise 'Incorrectly formatted JSON config file' unless @data
     end
   end
